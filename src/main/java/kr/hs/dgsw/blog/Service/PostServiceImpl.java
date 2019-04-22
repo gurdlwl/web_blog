@@ -32,6 +32,12 @@ public class PostServiceImpl implements PostService{
     }
 
     @Override
+    public List<PostUsernameProtocol> findPost(Long id){
+        List<Post> postList = this.postRepository.findByUserId(id);
+        return createList(postList);
+    }
+
+    @Override
     public PostUsernameProtocol updatePost(Long id, Post post) {
         return this.postRepository.findById(id)
                 .map(found -> {

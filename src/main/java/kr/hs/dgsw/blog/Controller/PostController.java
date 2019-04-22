@@ -24,6 +24,11 @@ public class PostController {
         return postService.findAllPost();
     }
 
+    @GetMapping("/ViewPost/{id}")
+    public List<PostUsernameProtocol> findPost(@PathVariable Long id){
+        return postService.findPost(id);
+    }
+
     @PutMapping("/UpdatePost/{id}")
     public PostUsernameProtocol updatePost(@PathVariable Long id, @RequestBody Post post){
         return postService.updatePost(id, post);

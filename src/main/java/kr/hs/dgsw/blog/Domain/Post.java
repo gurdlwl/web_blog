@@ -40,5 +40,4 @@ public class Post {
         this.modified = p.getModified();
         this.postFilePath = p.getPostFilePath();
     }
-
 }
