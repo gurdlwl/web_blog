@@ -12,7 +12,7 @@ POST http://localhost:8080/InsertUser
 Content-Type: application/json
 
 {
-  "account": "hi",
+  "account": "1321231",
   "password": "1234",
   "name": "ijh",
   "email": "aaa@gmail.com",

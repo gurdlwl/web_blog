@@ -1,0 +1,281 @@
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "account": "1321231",
+  "password": "1234",
+  "name": "ijh",
+  "email": "aaa@gmail.com",
+  "phone": "01000000000"
+}
+
+<> 2019-04-22T074928.200.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "account": "1321231",
+  "password": "1234",
+  "name": "ijh",
+  "email": "aaa@gmail.com",
+  "phone": "01000000000"
+}
+
+<> 2019-04-22T074604.400.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "account": "1321231",
+  "password": "1234",
+  "name": "ijh",
+  "email": "aaa@gmail.com",
+  "phone": "01000000000"
+}
+
+<> 2019-04-22T074414.400.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "account": "1321231",
+  "password": "1234",
+  "name": "ijh",
+  "email": "aaa@gmail.com",
+  "phone": "01000000000"
+}
+
+<> 2019-04-22T074125.400.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "account": "1321231",
+  "password": "1234",
+  "name": "ijh",
+  "email": "aaa@gmail.com",
+  "phone": "01000000000"
+}
+
+<> 2019-04-22T072815.400.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "account": "hi",
+  "password": "1234",
+  "name": "ijh",
+  "email": "aaa@gmail.com",
+  "phone": "01000000000"
+}
+
+<> 2019-04-22T072612.400.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "account": "hi",
+  "password": "1234",
+  "name": "ijh",
+  "email": "aaa@gmail.com",
+  "phone": "01000000000"
+}
+
+<> 2019-04-22T072201.500.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "account": "hi",
+  "password": "1234",
+  "name": "ijh",
+  "email": "aaa@gmail.com",
+  "phone": "01000000000"
+}
+
+<> 2019-04-22T071553.500.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "account": "hi",
+  "password": "1234",
+  "name": "ijh",
+  "email": "aaa@gmail.com",
+  "phone": "01000000000"
+}
+
+<> 2019-04-22T071503.500.json
+
+###
+
+GET http://localhost:8080/ViewAllUser
+Accept: application/json
+
+<> 2019-04-22T071500.200.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "account": "hi",
+  "password": "1234",
+  "name": "ijh",
+  "email": "aaa@gmail.com",
+  "phone": "01000000000"
+}
+
+<> 2019-04-22T070012.500.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "account": "hi",
+  "password": "1234",
+  "name": "ijh",
+  "email": "aaa@gmail.com",
+  "phone": "01000000000"
+}
+
+<> 2019-04-22T060850.500.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "account": "hi",
+  "password": "1234",
+  "name": "ijh",
+  "email": "aaa@gmail.com",
+  "phone": "01000000000"
+}
+
+<> 2019-04-22T060209.400.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "account": "hi",
+  "password": "1234",
+  "name": "ijh",
+  "email": "aaa@gmail.com",
+  "phone": "01000000000"
+}
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "account": "hi",
+  "password": "1234",
+  "name": "ijh",
+  "email": "aaa@gmail.com",
+  "phone": "01000000000"
+}
+
+<> 2019-04-22T023738.400.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "username": "aasdf",
+  "email": "aaa@aaa.com"
+}
+
+<> 2019-04-22T023441.500.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "name": "임준혁",
+  "email": "gurdlwl@dgsw.hs.kr",
+  "phone": "01012345678",
+  "password": "1234",
+  "account": "aaaaa"
+}
+
+<> 2019-04-22T023305.400.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "name": "임준혁",
+  "email": "gurdlwl@dgsw.hs.kr",
+  "phone": "01012345678"
+}
+
+<> 2019-04-22T023223.500.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "name": "임준혁",
+  "email": "gurdlwl@dgsw.hs.kr",
+  "phone": "01012345678",
+  "password": "12345678"
+}
+
+<> 2019-04-22T023203.400.json
+
+###
+
+GET http://localhost:8080/ViewAllUser
+Accept: application/json
+
+<> 2019-04-22T022344.200.json
+
+###
+
+GET http://localhost:8080/ViewAllUser
+Accept: application/json
+
+###
+

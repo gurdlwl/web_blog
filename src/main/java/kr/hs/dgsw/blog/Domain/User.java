@@ -3,6 +3,7 @@ package kr.hs.dgsw.blog.Domain;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.slf4j.Logger;
@@ -31,7 +32,7 @@ public class User {
     public void setPassword(String password){
         try{
             MessageDigest md = MessageDigest.getInstance("SHA-512");
-            md.update(password.getBytes(), 9, password.getBytes().length);
+            md.update(password.getBytes(), 0, password.getBytes().length);
             this.password = new BigInteger(1, md.digest()).toString(16);
         } catch (NoSuchAlgorithmException e) {
             Logger logger = LoggerFactory.getLogger(User.class);
@@ -59,6 +60,15 @@ public class User {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime modified;
 
+    public User(){}
+
+    public User(String account, String password, String name, String email, String phone) {
+        this.account = account;
+        this.password = password;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+    }
 
     public Long getId() {
         return id;
