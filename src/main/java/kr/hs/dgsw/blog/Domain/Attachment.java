@@ -18,5 +18,34 @@ public class Attachment {
 
     private Long postId;
 
+    public Attachment() { }
 
+    public Attachment(String storedPath, Long postId) {
+        this.storedPath = storedPath;
+        this.postId = postId;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getStoredPath() {
+        return storedPath;
+    }
+
+    public void setStoredPath(String storedPath) {
+        this.storedPath = storedPath;
+    }
+
+    public Long getPostId() {
+        return postId;
+    }
+
+    public void setPostId(Long postId) {
+        this.postId = postId;
+    }
 }
