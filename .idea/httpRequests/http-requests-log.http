@@ -9,6 +9,54 @@ Content-Type: application/json
   "phone": "01000000000"
 }
 
+<> 2019-04-23T012249.200.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "account": "1321231",
+  "password": "1234",
+  "name": "ijh",
+  "email": "aaa@gmail.com",
+  "phone": "01000000000"
+}
+
+###
+
+GET http://localhost:8080/ViewAllUser
+Accept: application/json
+
+<> 2019-04-22T075118.200.json
+
+###
+
+DELETE http://localhost:8080/RemoveUser/1
+
+<> 2019-04-22T075115.200.json
+
+###
+
+GET http://localhost:8080/ViewUser/1
+Accept: application/json
+
+<> 2019-04-22T075028.200.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "account": "1321231",
+  "password": "1234",
+  "name": "ijh",
+  "email": "aaa@gmail.com",
+  "phone": "01000000000"
+}
+
 <> 2019-04-22T074928.200.json
 
 ###
