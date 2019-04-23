@@ -1,3 +1,47 @@
+GET http://localhost:8080/ViewUser/1
+Accept: application/json
+
+<> 2019-04-23T034946.200.json
+
+###
+
+GET http://localhost:8080/ViewAllUser
+Accept: application/json
+
+<> 2019-04-23T034939.200.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "account": "1321231",
+  "password": "1234",
+  "name": "ijh",
+  "email": "aaa@gmail.com",
+  "phone": "01000000000"
+}
+
+<> 2019-04-23T034924.200.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "account": "1321231",
+  "password": "1234",
+  "name": "ijh",
+  "email": "aaa@gmail.com",
+  "phone": "01000000000"
+}
+
+<> 2019-04-23T034802.200.json
+
+###
+
 POST http://localhost:8080/InsertUser
 Content-Type: application/json
 

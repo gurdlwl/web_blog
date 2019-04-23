@@ -3,10 +3,10 @@ package kr.hs.dgsw.blog.Protocol;
 public enum ResponseType {
     FAIL                (0, "명령을 실행하지 못했습니다."),
 
-    USER_DELETE         (101, "사용자를 삭제했습니다."),
-    USER_ADD            (102, "사용자를 추가했습니다."),
-    USER_UPDATE         (103, "사용자 정보를 수정했습니다."),
-    USER_GET            (104, "사용자를 불러왔습니다."),
+    USER_GET            (101, "ID: [%d] 사용자의 정보를 불러왔습니다."),
+    USER_ADD            (102, "ID: [%d] 사용자를 추가했습니다."),
+    USER_UPDATE         (103, "ID: [%d] 사용자를 수정했습니다."),
+    USER_DELETE         (104, "ID: [%d] 사용자를 삭제했습니다."),
 
     POST_GET            (201, "게시글을 불러왔습니다."),
     POST_ADD            (202, "게시글을 추가했습니다."),

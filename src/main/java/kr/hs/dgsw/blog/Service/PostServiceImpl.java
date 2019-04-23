@@ -32,9 +32,9 @@ public class PostServiceImpl implements PostService{
     }
 
     @Override
-    public List<PostUsernameProtocol> findPost(Long id){
-        List<Post> postList = this.postRepository.findByUserId(id);
-        return createList(postList);
+    public Post findPost(Long id){
+        return this.postRepository.findTopByUserIdOrderByIdDesc(id)
+                .orElse(null);
     }
 
     @Override

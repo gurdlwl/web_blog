@@ -1,12 +1,11 @@
 package kr.hs.dgsw.blog.Controller;
 
 import kr.hs.dgsw.blog.Domain.Post;
-import kr.hs.dgsw.blog.Protocol.PostUsernameProtocol;
+import kr.hs.dgsw.blog.Protocol.ResponseFormat;
+import kr.hs.dgsw.blog.Protocol.ResponseType;
 import kr.hs.dgsw.blog.Service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 public class PostController {
@@ -15,27 +14,32 @@ public class PostController {
     private PostService postService;
 
     @PostMapping("/InsertPost")
-    public PostUsernameProtocol insertPost(@RequestBody Post post){
-        return postService.insertPost(post);
+    public ResponseFormat insertPost(@RequestBody Post post){
+        return new ResponseFormat(
+                ResponseType.POST_ADD, postService.insertPost(post));
     }
 
     @GetMapping("/ViewAllPost")
-    public List<PostUsernameProtocol> findAllPost(){
-        return postService.findAllPost();
+    public ResponseFormat findAllPost(){
+        return new ResponseFormat(
+                ResponseType.POST_GET, postService.findAllPost());
     }
 
     @GetMapping("/ViewPost/{id}")
-    public List<PostUsernameProtocol> findPost(@PathVariable Long id){
-        return postService.findPost(id);
+    public ResponseFormat findPost(@PathVariable Long id){
+        return new ResponseFormat(
+                ResponseType.POST_GET, postService.findPost(id));
     }
 
     @PutMapping("/UpdatePost/{id}")
-    public PostUsernameProtocol updatePost(@PathVariable Long id, @RequestBody Post post){
-        return postService.updatePost(id, post);
+    public ResponseFormat updatePost(@PathVariable Long id, @RequestBody Post post){
+        return new ResponseFormat(
+                ResponseType.POST_UPDATE, postService.updatePost(id, post));
     }
 
     @DeleteMapping("/DeletePost/{id}")
-    public boolean deletePost(@PathVariable Long id){
-        return postService.deletePost(id);
+    public ResponseFormat deletePost(@PathVariable Long id){
+        return new ResponseFormat(
+                ResponseType.POST_DELETE, postService.deletePost(id));
     }
 }
