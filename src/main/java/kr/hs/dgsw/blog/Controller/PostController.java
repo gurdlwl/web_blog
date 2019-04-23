@@ -15,31 +15,56 @@ public class PostController {
 
     @PostMapping("/InsertPost")
     public ResponseFormat insertPost(@RequestBody Post post){
-        return new ResponseFormat(
-                ResponseType.POST_ADD, postService.insertPost(post));
+        try{
+            return new ResponseFormat(
+                    ResponseType.POST_ADD, postService.insertPost(post));
+        } catch (Exception e){
+            return new ResponseFormat(
+                    ResponseType.FAIL, e);
+        }
     }
 
     @GetMapping("/ViewAllPost")
     public ResponseFormat findAllPost(){
-        return new ResponseFormat(
+        try{
+            return new ResponseFormat(
                 ResponseType.POST_GET, postService.findAllPost());
+        } catch (Exception e){
+            return new ResponseFormat(
+                    ResponseType.FAIL, e);
+        }
     }
 
     @GetMapping("/ViewPost/{id}")
     public ResponseFormat findPost(@PathVariable Long id){
-        return new ResponseFormat(
+        try{
+            return new ResponseFormat(
                 ResponseType.POST_GET, postService.findPost(id));
+        } catch (Exception e){
+            return new ResponseFormat(
+                    ResponseType.FAIL, e);
+        }
     }
 
     @PutMapping("/UpdatePost/{id}")
     public ResponseFormat updatePost(@PathVariable Long id, @RequestBody Post post){
-        return new ResponseFormat(
-                ResponseType.POST_UPDATE, postService.updatePost(id, post));
+        try{
+            return new ResponseFormat(
+                    ResponseType.POST_UPDATE, postService.updatePost(id, post));
+        } catch (Exception e){
+            return new ResponseFormat(
+                    ResponseType.FAIL, e);
+        }
     }
 
     @DeleteMapping("/DeletePost/{id}")
     public ResponseFormat deletePost(@PathVariable Long id){
+        try {
+            return new ResponseFormat(
+                    ResponseType.POST_DELETE, postService.deletePost(id));
+        } catch (Exception e){
         return new ResponseFormat(
-                ResponseType.POST_DELETE, postService.deletePost(id));
+                ResponseType.FAIL, e);
+        }
     }
 }

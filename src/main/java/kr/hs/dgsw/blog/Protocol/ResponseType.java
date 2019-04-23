@@ -13,7 +13,7 @@ public enum ResponseType {
     POST_UPDATE         (203, "게시글을 수정했습니다."),
     POST_DELETE         (204, "게시글을 삭제했습니다."),
 
-    ATTACHMENT_STORED   (301, ""),
+    ATTACHMENT_STORED   (301, "이미지"),
     ;
 
     final private int code;
