@@ -1,0 +1,14 @@
+{
+  "code": 202,
+  "desc": "게시글을 추가했습니다.",
+  "data": {
+    "id": null,
+    "userId": null,
+    "title": null,
+    "content": null,
+    "pictures": null,
+    "created": null,
+    "modified": null,
+    "username": null
+  }
+}

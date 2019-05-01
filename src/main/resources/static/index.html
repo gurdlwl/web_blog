@@ -9,12 +9,32 @@
     <link href="index_style.css" rel="stylesheet"/>
 
     <body>
-        <header class="container"></header>
-        <aside class="container left-container"></aside>
-        <aside class="container right-container"></aside>
+        <header class="container" style="color:white; font-size: 50px; line-height: 100px;">
+            DGSW BLOG
+        </header>
+
+        <aside class="container left-container">
+            <a href="">새 글 쓰기</a>
+            <div>최근 글</div>
+            <div id="post-title-list"></div>
+        </aside>
+
+        <aside id="user-info" class="container right-container">
+            <div id="profile-image"></div>
+            <div id="user-id"></div>
+            <div id="user-name"></div>
+            <div id="user-join-date"></div>
+            <div id="user-posted"></div>
+        </aside>
+
         <section id="main-container" class="container">
-            <div class="content" id="content"></div>
+            <div class="content" id="content">
+
+            </div>
         </section>
-        <footer class="container"></footer>
+
+        <footer class="container" style="line-height: 100px;">
+            Powered by DGSW
+        </footer>
     </body>
 </html>

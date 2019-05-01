@@ -1,12 +1,13 @@
 .container {
+    text-align: center;
+    font-weight: bold;
     position: fixed;
     left: 0;
     right: 0;
 }
 
 .content {
-    background-color: blue;
-    background-image: linear-gradient(to bottom right, blue, red);
+    background-color: white;
     height: 1000px;
 }
 
@@ -15,35 +16,35 @@ body {
 }
 
 header {
-    background-color: blue;
+    background-color: #E1C7AD;
     height: 110px;
 }
 
 aside.left-container {
-    background-color: darkgray;
-    width: 80px;
+    background-color: #EAE7D5;
+    width: 150px;
     top: 110px;
     bottom: 100px;
 }
 
 aside.right-container {
-    background-color: lightskyblue;
-    width: 80px;
-    left: calc(100vw - 80px);
+    background-color: #EAE7D5;
+    width: 200px;
+    left: calc(100vw - 200px);
     top: 110px;
     bottom: 100px;
 }
 
 section#main-container {
-    left: 80px;
-    right: 80px;
+    left: 150px;
+    right: 200px;
     top: 110px;
     bottom: 100px;
     overflow-y: auto;
 }
 
 footer {
-    background-color: yellow;
+    background-color: #B7B8B0;
     height: 100px;
     top: calc(100vh - 100px) !important;
 }

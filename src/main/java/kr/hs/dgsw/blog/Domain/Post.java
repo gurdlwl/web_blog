@@ -15,9 +15,7 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private Long userId;
-
     private String title;
 
     @Column(columnDefinition = "TEXT") // LOB BLOB CLOB

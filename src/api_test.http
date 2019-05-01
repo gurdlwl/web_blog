@@ -28,3 +28,18 @@ Accept: application/json
 DELETE  http://localhost:8080/RemoveUser/1
 
 ###
+
+GET http://localhost:8080/ViewAllPost
+Accept: application/json
+
+###
+POST http://localhost:8080/InsertPost
+Content-Type: application/json
+
+{
+  "userId" : 12345,
+  "title" : "hello",
+  "content" : "first"
+}
+
+###

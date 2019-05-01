@@ -1,3 +1,183 @@
+POST http://localhost:8080/InsertPost
+Content-Type: application/json
+
+{
+  "userId" : 12345,
+  "title" : "hello",
+  "content" : "first"
+}
+
+<> 2019-05-01T112936.200.json
+
+###
+
+GET http://localhost:8080/ViewAllPost
+Accept: application/json
+
+<> 2019-05-01T112928.200.json
+
+###
+
+POST http://localhost:8080/InsertPost
+Content-Type: application/json
+
+{
+  "userId" : 12345,
+  "title" : "hello",
+  "content" : "first",
+  "pictures" : "aaa"
+}
+
+<> 2019-05-01T112449.400.json
+
+###
+
+GET http://localhost:8080/ViewAllPost
+Accept: application/json
+
+<> 2019-05-01T111937.200.json
+
+###
+
+GET http://localhost:8080/ViewAllPost
+Accept: application/json
+
+<> 2019-05-01T111415.200.json
+
+###
+
+GET http://localhost:8080/ViewAllPost
+Accept: application/json
+
+<> 2019-05-01T111249.200.json
+
+###
+
+POST http://localhost:8080/InsertPost
+Content-Type: application/json
+
+{
+  "userId" : 12345,
+  "title" : "hello",
+  "content" : "first"
+}
+
+<> 2019-05-01T111034.200.json
+
+###
+
+POST http://localhost:8080/InsertPost
+Content-Type: application/json
+
+{
+  "userId" : 12345,
+  "title" : "hello",
+  "content" : "first",
+  "pictures" : "null"
+}
+
+<> 2019-05-01T105126.400.json
+
+###
+
+POST http://localhost:8080/InsertPost
+Content-Type: application/json
+
+{
+  "userId" : 12345,
+  "title" : "hello",
+  "content" : "first"
+}
+
+<> 2019-05-01T104709.200.json
+
+###
+
+GET http://localhost:8080/ViewAllPost
+Accept: application/json
+
+<> 2019-05-01T104515.200.json
+
+###
+
+GET http://localhost:8080/ViewAllUser
+Accept: application/json
+
+<> 2019-05-01T103042.200.json
+
+###
+
+GET http://localhost:8080/ViewAllPost
+Accept: application/json
+
+<> 2019-05-01T102846.200.json
+
+###
+
+GET http://localhost:8080/ViewAllUser
+Accept: application/json
+
+<> 2019-05-01T102843.200.json
+
+###
+
+GET http://localhost:8080/ViewAllUser
+Accept: application/json
+
+<> 2019-05-01T100916.200.json
+
+###
+
+GET http://localhost:8080/ViewAllPost
+Accept: application/json
+
+<> 2019-05-01T100756.200.json
+
+###
+
+GET http://localhost:8080/ViewAllPost
+Accept: application/json
+
+<> 2019-05-01T100455.200.json
+
+###
+
+GET http://localhost:8080/ViewAllUser
+Accept: application/json
+
+<> 2019-05-01T100433.200.json
+
+###
+
+GET http://localhost:8080/ViewAllUser
+Accept: application/json
+
+<> 2019-05-01T100219.200.json
+
+###
+
+POST http://localhost:8080/InsertUser
+Content-Type: application/json
+
+{
+  "account": "1321231",
+  "password": "1234",
+  "name": "ijh",
+  "email": "aaa@gmail.com",
+  "phone": "01000000000"
+}
+
+<> 2019-05-01T100215.200.json
+
+###
+
+GET http://localhost:8080/ViewAllUser
+Accept: application/json
+
+<> 2019-05-01T100200.200.json
+
+###
+
 GET http://localhost:8080/ViewUser/1
 Accept: application/json
 

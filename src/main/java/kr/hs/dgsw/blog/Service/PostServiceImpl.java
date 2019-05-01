@@ -23,8 +23,9 @@ public class PostServiceImpl implements PostService{
 
 
     @PostConstruct
-    public void init(){
-        Post p = this.postRepository.save(new Post(11L, "123456", "1234567"));
+    private void init(){
+        Post p = new Post((long) 12345, "123456", "1234567");
+        this.postRepository.save(p);
     }
 
     @Override
@@ -66,7 +67,7 @@ public class PostServiceImpl implements PostService{
     }
 
     private String getUsername(Post post){
-        Optional<User> found = this.userRepository.findById(post.getUserId());
+        Optional<User> found = this.userRepository.findById(post.getId());
 
         return (found.map(User::getName).orElse(null));
     }

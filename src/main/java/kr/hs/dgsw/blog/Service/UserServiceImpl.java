@@ -5,6 +5,7 @@ import kr.hs.dgsw.blog.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,6 +14,12 @@ public class UserServiceImpl implements UserService{
 
     @Autowired
     private UserRepository userRepository;
+
+    @PostConstruct
+    private void init(){
+        User u = new User("12345", "1234", "ijh", "gurdlwl@gmail.com", "01000000000");
+        this.userRepository.save(u);
+    }
 
     @Override
     public User insertUser(User user) {
