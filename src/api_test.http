@@ -37,7 +37,7 @@ POST http://localhost:8080/InsertPost
 Content-Type: application/json
 
 {
-  "userId" : 12345,
+  "userId" : 123456,
   "title" : "hello",
   "content" : "first"
 }

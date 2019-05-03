@@ -73,11 +73,11 @@ public class PostServiceImpl implements PostService{
     }
 
     private List<PostUsernameProtocol> createList(List<Post> postList){
-        List<PostUsernameProtocol> List = new ArrayList<>();
-        postList.forEach( post -> {
-            List.add(new PostUsernameProtocol(post, getUsername(post)));
+        List<PostUsernameProtocol> cupList = new ArrayList<>();
+        postList.forEach( comment -> {
+            cupList.add(new PostUsernameProtocol(comment, getUsername(comment)));
         });
 
-        return List;
+        return cupList;
     }
 }

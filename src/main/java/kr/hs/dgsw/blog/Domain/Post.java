@@ -15,6 +15,7 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private Long userId;
     private String title;
 
@@ -36,7 +37,14 @@ public class Post {
 
     public Post() { }
 
-    public Post(Post post) {
+    public Post(Post p) {
+        this.id = p.getId();
+        this.userId = p.getUserId();
+        this.title = p.getTitle();
+        this.content = p.getContent();
+        this.pictures = p.getPictures();
+        this.created = p.getCreated();
+        this.modified = p.getModified();
     }
 
     public Post(Long userId, String title, String content) {
@@ -50,15 +58,6 @@ public class Post {
         this.title = title;
         this.content = content;
         this.pictures = pictures;
-    }
-
-    public Post(Long userId, String title, String content, List<Attachment> pictures, LocalDateTime created, LocalDateTime modified) {
-        this.userId = userId;
-        this.title = title;
-        this.content = content;
-        this.pictures = pictures;
-        this.created = created;
-        this.modified = modified;
     }
 
 }

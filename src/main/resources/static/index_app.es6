@@ -8,7 +8,7 @@ async function getPostList() {
         let response = await $.get('http://localhost:8080/ViewAllPost');
 
         for (let i = 0; i < response.length; i++) {
-            let post = response[i].data;
+            let post = response[i];
 
             $('#content').prepend(`
                 <div id=${post.id}>
@@ -22,6 +22,7 @@ async function getPostList() {
         }
     } catch (e) {
         alert("PostList 불러오기 실패");
+        console.log(e);
         console.log(JSON.stringify(e));
     }
 }

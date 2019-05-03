@@ -7,8 +7,8 @@ import lombok.Data;
 public class PostUsernameProtocol extends Post{
     private String username;
 
-    public PostUsernameProtocol(Post post, String username){
-        super(post);
+    public PostUsernameProtocol(Post p, String username){
+        super(p);
         this.username = username;
     }
 }
