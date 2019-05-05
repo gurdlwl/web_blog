@@ -1,6 +1,33 @@
 GET http://localhost:8080/ViewAllPost
 Accept: application/json
 
+<> 2019-05-05T044216.200.json
+
+###
+
+POST http://localhost:8080/InsertPost
+Content-Type: application/json
+
+{
+  "userId" : 123456,
+  "title" : "hello",
+  "content" : "first"
+}
+
+<> 2019-05-05T044214.200.json
+
+###
+
+GET http://localhost:8080/ViewAllPost
+Accept: application/json
+
+<> 2019-05-05T042742.200.json
+
+###
+
+GET http://localhost:8080/ViewAllPost
+Accept: application/json
+
 <> 2019-05-03T025553.200.json
 
 ###
@@ -483,51 +510,6 @@ GET http://localhost:8080/ViewAllUser
 Accept: application/json
 
 <> 2019-04-22T071500.200.json
-
-###
-
-POST http://localhost:8080/InsertUser
-Content-Type: application/json
-
-{
-  "account": "hi",
-  "password": "1234",
-  "name": "ijh",
-  "email": "aaa@gmail.com",
-  "phone": "01000000000"
-}
-
-<> 2019-04-22T070012.500.json
-
-###
-
-POST http://localhost:8080/InsertUser
-Content-Type: application/json
-
-{
-  "account": "hi",
-  "password": "1234",
-  "name": "ijh",
-  "email": "aaa@gmail.com",
-  "phone": "01000000000"
-}
-
-<> 2019-04-22T060850.500.json
-
-###
-
-POST http://localhost:8080/InsertUser
-Content-Type: application/json
-
-{
-  "account": "hi",
-  "password": "1234",
-  "name": "ijh",
-  "email": "aaa@gmail.com",
-  "phone": "01000000000"
-}
-
-<> 2019-04-22T060209.400.json
 
 ###
 
