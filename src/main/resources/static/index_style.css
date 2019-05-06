@@ -11,6 +11,35 @@
     height: 1000px;
 }
 
+hr{
+    width: 30vw;
+}
+
+div.post-title{
+    font-size: 40px;
+}
+
+div#new-post-div:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+div.post-username{
+
+}
+
+div.post-content{
+
+}
+
+div.post-created{
+    color: gray;
+}
+
+div.post-modified{
+    color: gray;
+}
+
 div.post-footer{
 
 }
@@ -51,4 +80,9 @@ footer {
     background-color: #B7B8B0;
     height: 100px;
     top: calc(100vh - 100px) !important;
+}
+
+li:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }

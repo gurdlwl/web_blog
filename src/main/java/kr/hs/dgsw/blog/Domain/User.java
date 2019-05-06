@@ -3,7 +3,6 @@ package kr.hs.dgsw.blog.Domain;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.slf4j.Logger;
@@ -70,4 +69,12 @@ public class User {
         this.phone = phone;
     }
 
+    public User(User user) {
+        this.account = user.getAccount();
+        this.password = user.getPassword();
+        this.name = user.getName();
+        this.email = user.getEmail();
+        this.phone = user.getPhone();
+        this.profilePath = user.getProfilePath();
+    }
 }

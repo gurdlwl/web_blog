@@ -14,7 +14,7 @@ Content-Type: application/json
 {
   "account": "1321231",
   "password": "1234",
-  "name": "ijh",
+  "username": "ijh",
   "email": "aaa@gmail.com",
   "phone": "01000000000"
 }
@@ -37,9 +37,13 @@ POST http://localhost:8080/InsertPost
 Content-Type: application/json
 
 {
-  "userId" : 123456,
-  "title" : "hello",
-  "content" : "first"
+  "userId" : 1,
+  "title" : "hihi1112222333331",
+  "content" : "second"
 }
+
+###
+GET http://localhost:8080/ViewPost/1
+Accept: application/json
 
 ###

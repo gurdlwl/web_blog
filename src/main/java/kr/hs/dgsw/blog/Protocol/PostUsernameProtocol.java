@@ -11,4 +11,5 @@ public class PostUsernameProtocol extends Post{
         super(p);
         this.username = username;
     }
+
 }

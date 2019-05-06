@@ -24,7 +24,7 @@ public class PostServiceImpl implements PostService{
 
     @PostConstruct
     private void init(){
-        Post p = new Post((long) 12345, "123456", "1234567");
+        Post p = new Post((long) 1, "123456", "1234567");
         this.postRepository.save(p);
     }
 
@@ -40,8 +40,11 @@ public class PostServiceImpl implements PostService{
     }
 
     @Override
-    public Post findPost(Long id){
-        return this.postRepository.findTopByUserIdOrderByIdDesc(id)
+    public PostUsernameProtocol findPost(Long id){
+        return this.postRepository.findById(id)
+                .map(found ->{
+                    return new PostUsernameProtocol(found, getUsername(found));
+                })
                 .orElse(null);
     }
 
@@ -67,7 +70,7 @@ public class PostServiceImpl implements PostService{
     }
 
     private String getUsername(Post post){
-        Optional<User> found = this.userRepository.findById(post.getId());
+        Optional<User> found = this.userRepository.findById(post.getUserId());
 
         return (found.map(User::getName).orElse(null));
     }
