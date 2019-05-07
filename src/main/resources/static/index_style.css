@@ -11,6 +11,16 @@
     height: 1000px;
 }
 
+div#header{
+    color:white;
+    font-size: 50px;
+    line-height: 100px;
+}
+
+div#header:hover{
+    cursor:pointer;
+}
+
 hr{
     width: 30vw;
 }

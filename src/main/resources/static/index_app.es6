@@ -77,16 +77,27 @@ async function getPostTitleList(){
     }
 }
 
-async function addNewPost(){
+function addPostSet(){
     $('#content').html("");
 
-    //input 넣기
     $('#content').html(`
             <div>제목</div>
             <input id="new-post-title" type="text" style="width: 50vw;">
             <div>내용</div>
             <textarea id="new-post-content" style="width: 50vw; height: 50vh;"></textarea>
+            <div> 
+                <button onclick="addNewPost()">게시</button>
+                <button onclick="window.location.reload()">취소</button>
+            </div>
     `);
+
+}
+
+async function addNewPost(){
+    if( $('#new-post-title').val() == "" || $('#new-post-content').val() == ""){
+        alert("제목과 내용을 입력해주세요");
+        return;
+    }
 
     try{
         await $.ajax({
@@ -98,8 +109,9 @@ async function addNewPost(){
                 title: $('#new-post-title').val(),
                 content: $('#new-post-content').val()
             }),
-            success: function (response){
+            success: function (){
                 alert("Post 입력 성공");
+                window.location.reload();
             },
             error: function (err){
                 console.log(err);
@@ -150,8 +162,7 @@ async function deletePost(button, id){
             success: function (response) {
                 if(response.data == true){
                     alert("Post 삭제 성공");
-                    $('#line_').remove();
-                    $(`#title_line_${id}`).remove();
+                    window.location.reload();
                 }
                 else
                     alert("Post 삭제 실패");
