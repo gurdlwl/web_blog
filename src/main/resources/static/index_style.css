@@ -11,22 +11,19 @@
     height: 1000px;
 }
 
-div#header{
+.link:hover{
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+header{
     color:white;
     font-size: 50px;
     line-height: 100px;
 }
 
-div#header:hover{
-    cursor:pointer;
-}
-
 hr{
-    width: 30vw;
-}
-
-div.post-title{
-    font-size: 40px;
+    width: 35vw;
 }
 
 div#new-post-div{
@@ -38,24 +35,32 @@ div#new-post-div:hover{
     cursor: pointer;
 }
 
+div.post-title{
+    font-size: 40px;
+    margin: 10px 0 10px 0;
+}
+
 div.post-username{
-
-}
-
-div.post-content{
-
-}
-
-div.post-created{
+    font-size: small;
     color: gray;
 }
 
-div.post-modified{
+div.post-content{
+    font-size: 20px;
+    margin: 20px 0 20px 0;
+}
+
+div.post-created{
+    font-size: small;
     color: gray;
 }
 
 div.post-footer{
 
+}
+
+div.setInline{
+    display: inline;
 }
 
 body {
@@ -94,9 +99,4 @@ footer {
     background-color: #B7B8B0;
     height: 100px;
     top: calc(100vh - 100px) !important;
-}
-
-li:hover{
-    text-decoration: underline;
-    cursor: pointer;
 }

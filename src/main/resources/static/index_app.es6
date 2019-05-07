@@ -6,6 +6,8 @@ $(function (){
 
 let post;
 let default_url = "http://localhost:8080";
+let title;
+let content;
 
 async function getPostList() {
     try {
@@ -17,16 +19,20 @@ async function getPostList() {
 
         $('#content').html(`
             <div id="line_${post.id}">
-                <div class="post-title">${post.title}</div><hr>
-                <div class="post-username">${post.username}</div>
+                <div class="post-title">${post.title}</div>
+                <div>
+                    <div class="post-username setInline">${post.username}</div>
+                    <div class="post-created setInline">${post.created}</div>
+                    <button class="post-edit" id="post-edit" onclick="editPost(this, ${post.id})">수정</button>
+                    <button class="post-delete" id="post-delete" onclick="deletePost(this, ${post.id})">삭제</button>
+                </div><hr>
                 <div class="post-content">${post.content}</div>
-                <div class="post-created">${post.created}</div>
-                <div class="post-modified">${post.modified}</div>
                 <div class="post-footer">
-                    <div>이전</div>
-                        <button class="post-edit" id="post-edit" onclick="editPost(this, ${post.id})">수정</button>
-                        <button class="post-delete" id="post-delete" onclick="deletePost(this, ${post.id})">삭제</button>
-                    <div>다음</div>
+                    <div>
+                        <div class="link setInline" onclick="prevPost(${post.id})">이전</div>
+                        <div class="link setInline" onclick="nextPost(${post.id})">다음</div>
+                    </div>
+                    
                 </div>
             </div>
         `);
@@ -42,16 +48,20 @@ async function getPost(id){
 
         $('#content').html(`
             <div id="line_${post.id}">
-                <div class="post-title">${post.title}</div><hr>
-                <div class="post-username">${post.username}</div>
+                <div class="post-title">${post.title}</div>
+                <div>
+                    <div class="post-username setInline">${post.username}</div>
+                    <div class="post-created setInline">${post.created}</div>
+                    <button class="post-edit" id="post-edit" onclick="editPost(this, ${post.id})">수정</button>
+                    <button class="post-delete" id="post-delete" onclick="deletePost(this, ${post.id})">삭제</button>
+                </div><hr>
                 <div class="post-content">${post.content}</div>
-                <div class="post-created">${post.created}</div>
-                <div class="post-modified">${post.modified}</div>
                 <div class="post-footer">
-                    <div>이전</div>
-                        <button class="post-edit" id="post-edit" onclick="editPost(this, ${post.id})">수정</button>
-                        <button class="post-delete" id="post-delete" onclick="deletePost(this, ${post.id})">삭제</button>
-                    <div>다음</div>
+                   <div>
+                        <div class="link setInline" onclick="prevPost(${post.id})">이전</div>
+                        <div class="link setInline" onclick="nextPost(${post.id})">다음</div>
+                    </div>
+                    
                 </div>
             </div>
             `);
@@ -69,7 +79,7 @@ async function getPostTitleList(){
             let postTitle = response.data[i].title;
 
             $('#post-title-list').prepend(`
-                <li id="title_line_${postId}" onclick="getPost(${postId})">${postTitle}</li>
+                <li class="link" id="title_line_${postId}" onclick="getPost(${postId})">${postTitle}</li>
             `);
         }
     } catch (e) {
@@ -124,9 +134,15 @@ async function addNewPost(){
 }
 
 async function editPost(button, id){
-    if($(button).text() == '수정'){
+    let postNum = $(`#line_${id}`);
 
-        //form input 으로 변경
+    if($(button).text() == '수정'){
+        title = postNum.find($('.post-title')).html();
+        content = postNum.find($('.post-content')).html();
+
+        postNum.find($('.post-title')).html(`<input value="${title}">`);
+        postNum.find($('.post-content')).html(`<input value="${content}">`);
+
 
         $(button).text('확인');
         $(button).next().text('취소');
@@ -136,9 +152,14 @@ async function editPost(button, id){
                 type: 'PUT',
                 url: default_url + '/UpdatePost/' + id,
                 contentType: 'application/json',
+                data: JSON.stringify({
+                    title: postNum.find($('.post-title')).html().children().val(),
+                    content: postNum.find($('.post-content')).html().children().val()
+                }),
                 success: function (response){
                     alert("Post 수정 성공");
-                    //input닫고 response값 넣기
+                    postNum.find($('.post-title')).html(response.title);
+                    postNum.find($('.post-content')).html(response.content);
                 },
                 error: function (err){
                     console.log(err);
@@ -172,6 +193,9 @@ async function deletePost(button, id){
             }
         });
     } else if($(button).text() == '취소'){
+        $(`#line_${id}`).find($('.post-title')).html(title);
+        $(`#line_${id}`).find($('.post-content')).html(content);
+
         $(button).text('삭제');
         $(button).prev().text('수정');
     }
@@ -194,3 +218,10 @@ async function getUserInfo(){
     }
 }
 
+function prevPost(id){
+
+}
+
+function nextPost(id){
+
+}
